@@ -1337,7 +1337,7 @@
 }
 
 .photo-grid--offset .photo-card {
-  display: flex;
+  display: block;
   overflow: visible;
 }
 
@@ -1366,19 +1366,34 @@
   content: none;
 }
 
+/* The frame and photo are pinned to the card (position: absolute), so the
+   card's height comes only from its aspect-ratio. This stops iPhone Safari
+   from stretching a frame to the photo's full height and spilling it over
+   the next section. */
 .photo-frame {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  flex: 1;
-  min-height: 0;
   overflow: hidden;
   border: 3px solid #0a0a0a;   /* subtle black edge */
 }
 
 .photo-frame img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* older phones without aspect-ratio support: reserve the same shape with padding */
+@supports not (aspect-ratio: 1 / 1) {
+  .photo-grid--offset .photo-card { padding-top: 133.333%; }
+}
+@media (max-width: 480px) {
+  @supports not (aspect-ratio: 1 / 1) {
+    .photo-grid--offset .photo-card { padding-top: 75%; }
+  }
 }
 
 @media (max-width: 600px) {
