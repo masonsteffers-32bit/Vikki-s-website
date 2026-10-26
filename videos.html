@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos — Victoria Steffers Photography</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/videos.css" />
+</head>
+<body>
+
+  <!-- Navigation (Videos is intentionally not in the nav — reached via "View All" on the home page) -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">Victoria<span>.</span>Steffers</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#photos">Gallery</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="videos-hero container">
+    <h1 class="animate-fade-up delay-1">Short Form <em>Content</em></h1>
+  </header>
+
+  <main class="videos-page container">
+
+    <!-- Short form (reels) -->
+    <section class="video-group animate-fade-up delay-3" id="short-form">
+      <div class="video-group-header">
+        <h2 class="video-group-title">All Videos</h2>
+      </div>
+
+      <!--
+        TO ADD A REEL:
+        1. Put the video file in the  videos/reels/  folder (e.g. videos/reels/reel1.mp4)
+        2. In one of the cards below, replace the whole  <div class="reel-placeholder"> ... </div>  with:
+             <video src="videos/reels/reel1.mp4" preload="metadata"></video>
+        Add more <div class="reel-card"> blocks for more reels; delete leftover placeholders when you're done.
+      -->
+      <div class="reel-grid">
+        <div class="reel-card">
+          <video src="videos/reels/campus-move.mp4" preload="metadata" muted loop playsinline aria-label="Campus Move reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/life-at-uccs.mp4" preload="metadata" muted loop playsinline aria-label="Life at UCCS reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/rec-center-uccs.mp4" preload="metadata" muted loop playsinline aria-label="UCCS Rec Center reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/welcome-back.mp4" preload="metadata" muted loop playsinline aria-label="Welcome Back reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/grid.mp4" preload="metadata" muted loop playsinline aria-label="Grid reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/guess-that-major.mp4" preload="metadata" muted loop playsinline aria-label="Guess That Major reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/homecoming-reel.mp4" preload="metadata" muted loop playsinline aria-label="Homecoming reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/uccs-farm.mp4" preload="metadata" muted loop playsinline aria-label="UCCS Farm reel"></video>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      TO ADD THE YOUTUBE VIDEO (once Long Form is turned back on):
+      Replace the whole  <div class="longform-placeholder"> ... </div>  below with:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Documentary title"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      VIDEO_ID is the part after "watch?v=" in the YouTube link
+      (youtube.com/watch?v=abc123XYZ  ->  embed/abc123XYZ).
+      For more long-form videos, copy the whole <div class="longform-card"> ... </div> block.
+    -->
+    <!-- LONG FORM (YouTube) IS HIDDEN FOR NOW. To show it again, delete this line and the line that says END LONG FORM below.
+    <section class="video-group" id="long-form">
+      <div class="video-group-header">
+        <h2 class="video-group-title">Long Form</h2>
+        <span class="video-group-meta">YouTube</span>
+      </div>
+      <div class="longform-list">
+        <div class="longform-card">
+          <div class="longform-placeholder">
+            <span class="ph-corner ph-corner--tl"></span>
+            <span class="ph-corner ph-corner--tr"></span>
+            <span class="ph-corner ph-corner--bl"></span>
+            <span class="ph-corner ph-corner--br"></span>
+            <span class="ph-play ph-play--lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+            <h3 class="longform-title">Documentary</h3>
+            <p class="section-label">Coming Soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    END LONG FORM -->
+
+    <!-- Call to action -->
+    <section class="videos-cta">
+      <p class="section-label">Have a project in mind?</p>
+      <h2>Let's tell your <span>story</span></h2>
+      <a href="index.html#contact" class="videos-cta-btn">
+        Get in Touch
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Victoria Steffers. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/victoria-steffers-034098440/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+  <script src="js/reels.js"></script>
+
+</body>
+</html>

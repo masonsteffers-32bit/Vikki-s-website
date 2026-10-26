@@ -1,0 +1,163 @@
+/* ============================================
+   VIDEOS.CSS — Videos Page
+   (reel & documentary card styles are in main.css)
+   ============================================ */
+
+/* --- Page Header (matches the Gallery page) --- */
+.videos-hero {
+  padding-top: calc(var(--nav-height) + var(--spacing-xl));
+  padding-bottom: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+}
+
+.videos-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+.videos-hero .section-label {
+  margin-bottom: var(--spacing-xs);
+}
+
+.videos-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: var(--spacing-sm);
+}
+
+.videos-hero h1 em {
+  color: var(--color-accent);
+}
+
+.videos-hero p {
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+/* --- Page body --- */
+.videos-page {
+  padding-top: var(--spacing-lg);
+}
+
+.videos-page .video-group + .video-group {
+  margin-top: var(--spacing-xl);
+}
+
+.videos-page .video-group-header {
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* --- Reels grid --- */
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* --- Long form list --- */
+.longform-list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+/* --- Call to action --- */
+.videos-cta {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.videos-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.15;
+  margin-bottom: var(--spacing-md);
+}
+
+.videos-cta h2 span {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+.videos-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 2.2rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  transition: background var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.videos-cta-btn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.25);
+}
+
+.videos-cta-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-snappy);
+}
+
+.videos-cta-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .reel-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .videos-hero {
+    padding-top: calc(var(--nav-height) + var(--spacing-lg));
+  }
+
+  .reel-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .reel-grid .ph-play {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.7rem;
+  }
+
+  .reel-grid .ph-title {
+    font-size: 1.1rem;
+  }
+
+  .videos-page .video-group + .video-group,
+  .videos-cta {
+    margin-top: var(--spacing-lg);
+  }
+
+  .videos-cta {
+    padding-top: var(--spacing-lg);
+  }
+}

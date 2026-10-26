@@ -1,0 +1,8 @@
+# Not part of the website - keep these out of GitHub
+_originals/
+.claude_tmp/
+
+# System files
+Thumbs.db
+desktop.ini
+.DS_Store

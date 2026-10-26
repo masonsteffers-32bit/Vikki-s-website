@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Victoria Steffers Photography</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">Victoria<span>.</span>Steffers</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#photos" class="active">Gallery</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Gallery Header -->
+  <header class="gallery-hero container">
+    <p class="section-label animate-fade-up">The Collection</p>
+    <h1 class="animate-fade-up delay-1">The <em>Gallery</em></h1>
+    <p class="animate-fade-up delay-2">A curated selection of moments frozen in time — each frame a chapter in a larger story.</p>
+  </header>
+
+  <!-- Filter Tabs -->
+  <div class="gallery-filters container">
+    <button class="filter-btn active" data-filter="all">All Work</button>
+    <button class="filter-btn" data-filter="sports">Sports</button>
+    <button class="filter-btn" data-filter="events">Events</button>
+    <button class="filter-btn" data-filter="people">People</button>
+    <button class="filter-btn" data-filter="weddings">Weddings</button>
+  </div>
+
+  <!-- Masonry Gallery -->
+  <div class="gallery-masonry" id="galleryGrid">
+
+    <!-- Sports -->
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports10.webp" alt="Track and field athlete" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/people/people6.webp" alt="Wedding first look" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events5.webp" alt="Conference event" />
+    </div>
+
+    <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+      <img src="images/campus/campus1.webp" alt="Mountain landscape" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports20.jpg" alt="Baseball player sliding into base" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w8.jpg" alt="Bride and groom facing each other outdoors" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports5.webp" alt="Basketball action" />
+    </div>
+
+    <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people4.webp" alt="Wedding ceremony" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events11.webp" alt="Festival celebration" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+      <img src="images/campus/campus6.jpg" alt="Kraemer Family Library under a blue sky" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+      <img src="images/campus/campus2.webp" alt="Ocean waves" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w2.jpg" alt="Bride and groom embracing during the reception" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports7.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people7.webp" alt="Wedding couple golden hour" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports25.jpg" alt="Basketball player going up for a layup" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events8.webp" alt="Live concert" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+      <img src="images/campus/campus3.webp" alt="Sunset field" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w3.jpg" alt="Close-up of the couple’s hands and rings on the groom’s lapel" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports2.webp" alt="Cycling race" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports22.jpg" alt="Pitcher delivering a pitch" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports13.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people9.webp" alt="Wedding reception" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events3.webp" alt="Formal event" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w9.jpg" alt="Bride and groom on a small garden bridge" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people11.jpg" alt="Student studying on a laptop outside" loading="lazy" />
+    </div>
+
+        <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+      <img src="images/campus/campus4.webp" alt="Sunset field" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports3.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports15.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+     <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people1.webp" alt="Wedding first look" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports21.jpg" alt="Batter gripping his bat" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w4.jpg" alt="Bride with her bridesmaids in matching robes" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events10.webp" alt="Misty mountains" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports4.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports16.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports19.jpg" alt="Packed stands behind home plate before a baseball game" loading="lazy" />
+    </div>
+
+     <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/people/people2.webp" alt="Wedding first look" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w1.jpg" alt="Bride and bridesmaids posing on a curved staircase" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events4.webp" alt="Misty mountains" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports6.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+      <img src="images/campus/campus5.jpg" alt="Pine trees and gardens along a campus path" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports18.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+     <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/people/people3.webp" alt="Wedding first look" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w7.jpg" alt="Groom and groomsmen lined up on the lawn" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events1.webp" alt="Misty mountains" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports24.jpg" alt="Batter swinging at a pitch" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports8.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+     <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people8.webp" alt="Wedding first look" loading="lazy" />
+    </div>
+  
+        <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events2.webp" alt="Misty mountains" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w5.jpg" alt="Groom and groomsmen posing on a staircase" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports26.jpg" alt="Basketball player dribbling up the court" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports11.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+     <div class="gallery-item" data-category="people" onclick="openLightbox(this)">
+      <img src="images/people/people10.webp" alt="Wedding first look" loading="lazy" />
+    </div>
+  
+        <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+      <img src="images/events/events7.webp" alt="Misty mountains" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports12.webp" alt="Swimming athlete" loading="lazy" />
+    </div>
+
+    <div class="gallery-item" data-category="sports" onclick="openLightbox(this)">
+      <img src="images/sports/sports23.jpg" alt="Infielder set in his ready stance" loading="lazy" />
+    </div>
+
+    <!-- Wedding -->
+    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+      <img src="images/weddings/web/w6.jpg" alt="Groomsmen lifting the groom on the lawn" loading="lazy" />
+    </div>
+  
+  
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="Enlarged photo" />
+    <div class="lightbox-caption">
+      <h4 id="lightboxTitle"></h4>
+      <span id="lightboxCategory"></span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Victoria Steffers. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/victoria-steffers-034098440/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = '';
+            item.style.animation = 'none';
+            item.offsetHeight; // trigger reflow
+            item.style.animation = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      const title = el.querySelector('h4')?.textContent || '';
+      const category = el.querySelector('.gallery-item-info span')?.textContent || '';
+      const lightbox = document.getElementById('lightbox');
+      document.getElementById('lightboxImg').src = img.src.replace('w=700', 'w=1600');
+      document.getElementById('lightboxTitle').textContent = title;
+      document.getElementById('lightboxCategory').textContent = category;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on background click
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeLightbox();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

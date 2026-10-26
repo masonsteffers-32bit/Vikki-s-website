@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victoria Steffers — Photography</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">Victoria<span>.</span>Steffers</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="#photos">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero: camera viewfinder intro -->
+  <section class="hero" id="hero">
+    <!-- data-focus-x / data-focus-y = where the focus box locks on, as a fraction of the photo
+         (0 = left/top, 1 = right/bottom). Currently set on Pikes Peak — update if you swap the photo. -->
+    <img src="images/campus/campus3.webp" alt="UCCS campus walkway with Pikes Peak in the distance"
+         class="hero-bg" id="heroBg" fetchpriority="high" data-focus-x="0.56" data-focus-y="0.27" />
+    <div class="hero-overlay"></div>
+
+    <div class="viewfinder" id="viewfinder" aria-hidden="true">
+      <span class="vf-corner vf-corner--tl"></span>
+      <span class="vf-corner vf-corner--tr"></span>
+      <span class="vf-corner vf-corner--bl"></span>
+      <span class="vf-corner vf-corner--br"></span>
+      <div class="vf-grid"></div>
+      <div class="vf-focus" id="vfFocus"><span class="vf-focus-dot"></span></div>
+
+      <div class="vf-bar vf-bar--top">
+        <span class="vf-mode">M</span>
+        <span class="vf-af">AF-C</span>
+        <span class="vf-spacer"></span>
+        <span class="vf-hide-sm">Raw</span>
+        <span class="vf-hide-sm">4K</span>
+        <span class="vf-battery"><i></i></span>
+      </div>
+
+      <div class="vf-bar vf-bar--bottom">
+        <span>1/500</span>
+        <span>F2.8</span>
+        <span class="vf-hide-sm">ISO 400</span>
+        <span class="vf-spacer"></span>
+        <span class="vf-shots">[<span id="vfShots">247</span>]</span>
+      </div>
+    </div>
+
+    <!-- Page title for search engines & screen readers (not shown on screen) -->
+    <h1 class="visually-hidden">Victoria Steffers — Photography &amp; Video</h1>
+
+    <a href="#about" class="hero-cta js-shutter" aria-label="Scroll down to About Me">
+      View
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+    </a>
+
+    <div class="vf-flash" id="vfFlash" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== About Me ===================== -->
+  <section class="about container" id="about">
+    <div class="about-inner">
+
+      <!-- Headshot: images/headshot/headshot.jpg (4:5 portrait). To change it, replace that file or the src below. -->
+      <div class="about-headshot">
+        <div class="about-headshot-frame">
+          <img src="images/headshot/headshot.jpg" alt="Portrait of Victoria Steffers" width="1600" height="2000" />
+        </div>
+      </div>
+
+      <div class="about-heading">
+        <p class="section-label">About Me</p>
+        <h2 class="about-name">Victoria <em>Steffers</em></h2>
+      </div>
+
+      <div class="about-body">
+        <p class="about-bio">
+          I have been telling stories through a lens since I got my first camera at 11. What started as a YouTube channel I ran as a kid grew into a real passion for media, and I’ve been sharpening my editing and production skills ever since.
+        </p>
+        <p class="about-bio">
+          At Tarleton State University, I shot photography and video at athletic events and contributed content to the university yearbook through 2025. I then moved to Colorado to continue my studies at the University of Colorado Colorado Springs, where I joined the UCCS Marketing and Social Media team in March 2026. There, I design content and help manage the university’s social media accounts.
+        </p>
+        <p class="about-bio">
+          I’m drawn to work that’s creative, has humor, and built on real connection with an audience. Whether it’s a game day highlight or a scroll stopping post, my goal is the same. I tell a story people want to engage with.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== Experience ===================== -->
+  <section class="experience container" id="experience">
+    <div class="showcase-header">
+      <div class="showcase-header-text">
+        <p class="section-label">Media Teams</p>
+        <h2 class="section-heading">Experience</h2>
+      </div>
+    </div>
+
+    <div class="exp-list">
+
+      <!-- ============ UCCS (featured case study) ============ -->
+      <article class="exp-card exp-feature">
+        <header class="exp-head">
+          <div class="exp-badge">UCCS</div>
+          <div class="exp-title">
+            <p class="exp-role">Marketing &amp; Social Media Assistant</p>
+            <h3 class="exp-school">University of Colorado Colorado Springs</h3>
+            <p class="exp-meta">
+              <span>Colorado Springs, CO</span>
+              <span class="exp-dates">March 2026 – Present</span>
+            </p>
+          </div>
+          <a href="https://www.instagram.com/uccs" class="exp-account" target="_blank" rel="noopener" aria-label="View the UCCS Instagram account (opens in a new tab)">
+            View Account
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+        </header>
+
+        <div class="exp-feature-body">
+          <!-- Phone view (the Instagram feed mockup) -->
+          <div class="exp-phone">
+            <span class="exp-phone-glow" aria-hidden="true"></span>
+            <img src="images/uccs-exp/phone-view.webp" alt="UCCS Instagram feed shown on a phone" loading="lazy" />
+          </div>
+
+          <div class="exp-details">
+            <!-- METRICS (Sept – Oct). Numbers count up when this scrolls into view. -->
+            <div class="exp-metrics">
+              <div class="exp-stats-head">
+                <h4 class="exp-block-title">Metrics</h4>
+                <span class="exp-stats-period">Sept – Oct</span>
+              </div>
+              <div class="exp-stats">
+                <div class="exp-stat"><span class="exp-stat-num">+77.4%</span><span class="exp-stat-label">Views</span></div>
+                <div class="exp-stat"><span class="exp-stat-num">+88.2%</span><span class="exp-stat-label">Reach</span></div>
+                <div class="exp-stat"><span class="exp-stat-num">+34.6%</span><span class="exp-stat-label">Content interactions</span></div>
+              </div>
+            </div>
+
+            <!-- RESPONSIBILITIES — edit, add or remove <li> lines -->
+            <div class="exp-block">
+              <h4 class="exp-block-title">Responsibilities</h4>
+              <ul class="exp-resp">
+                <li>Took on expanded responsibility for UCCS’s Instagram, Facebook, TikTok, LinkedIn, and Threads accounts, managing content creation, scheduling, and publishing across platforms.</li>
+                <li>Developed social media designs, trend-based content, and a recurring Reel/TikTok series focused on student engagement and storytelling.</li>
+                <li>Created and organized four-week content calendars to maintain consistent posting and engagement.</li>
+                <li>Assisted with paid social media campaigns and marketing/design projects from planning through publishing.</li>
+                <li>Monitored social media analytics across multiple platforms to evaluate performance and improve future content.</li>
+              </ul>
+            </div>
+
+            <!-- PLATFORMS & TOOLS — edit the chips to change them -->
+            <div class="exp-block exp-chips-block">
+              <div>
+                <h4 class="exp-block-title">Platforms</h4>
+                <div class="exp-chips">
+                  <span>Instagram</span><span>Facebook</span><span>LinkedIn</span><span>Threads</span><span>TikTok</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="exp-block-title">Tools</h4>
+                <div class="exp-chips">
+                  <span>Canva</span><span>Photoshop</span><span>Premiere Pro</span><span>CapCut</span><span>Lightroom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SELECTED WORK: tap any piece to view it full size.
+             To swap one, change the image path in BOTH data-full="..." and src="...", plus the title/tag text. -->
+        <div class="exp-work">
+          <div class="exp-work-head">
+            <h4 class="exp-block-title">Selected Work</h4>
+            <span class="exp-work-hint">Tap to enlarge</span>
+          </div>
+          <div class="exp-work-grid" data-lightbox>
+          <button type="button" class="exp-work-item" data-full="images/uccs-exp/department-series.webp" data-title="Department Series" data-tag="Template series">
+            <span class="exp-work-media"><img src="images/uccs-exp/department-series.webp" alt="Department Series — Office of International Affairs feature" loading="lazy" /></span>
+            <span class="exp-work-caption">
+              <span class="exp-work-title">Department Series</span>
+              <span class="exp-work-tag">Template series</span>
+            </span>
+          </button>
+          <button type="button" class="exp-work-item" data-full="images/uccs-exp/always-home.webp" data-title="Always Home" data-tag="Campaign">
+            <span class="exp-work-media"><img src="images/uccs-exp/always-home.webp" alt="Always Home — Campus brand graphic" loading="lazy" /></span>
+            <span class="exp-work-caption">
+              <span class="exp-work-title">Always Home</span>
+              <span class="exp-work-tag">Campaign</span>
+            </span>
+          </button>
+          <button type="button" class="exp-work-item" data-full="images/uccs-exp/announcement-post-template.webp" data-title="Announcement Post" data-tag="Template">
+            <span class="exp-work-media"><img src="images/uccs-exp/announcement-post-template.webp" alt="Announcement Post — Reusable announcement layout" loading="lazy" /></span>
+            <span class="exp-work-caption">
+              <span class="exp-work-title">Announcement Post</span>
+              <span class="exp-work-tag">Template</span>
+            </span>
+          </button>
+          <button type="button" class="exp-work-item" data-full="images/uccs-exp/ff-update.webp" data-title="Food Fight Update" data-tag="Campaign update">
+            <span class="exp-work-media"><img src="images/uccs-exp/ff-update.webp" alt="Food Fight Update — CU Food Fight goal announcement" loading="lazy" /></span>
+            <span class="exp-work-caption">
+              <span class="exp-work-title">Food Fight Update</span>
+              <span class="exp-work-tag">Campaign update</span>
+            </span>
+          </button>
+          <button type="button" class="exp-work-item" data-full="images/uccs-exp/fun-fact-series.webp" data-title="Fun Fact Series" data-tag="Template series">
+            <span class="exp-work-media"><img src="images/uccs-exp/fun-fact-series.webp" alt="Fun Fact Series — "The UCCS Advantage" series" loading="lazy" /></span>
+            <span class="exp-work-caption">
+              <span class="exp-work-title">Fun Fact Series</span>
+              <span class="exp-work-tag">Template series</span>
+            </span>
+          </button>
+          <button type="button" class="exp-work-item" data-full="images/uccs-exp/semester-essentials.webp" data-title="Semester Essentials" data-tag="Post">
+            <span class="exp-work-media"><img src="images/uccs-exp/semester-essentials.webp" alt="Semester Essentials — Student resource graphic" loading="lazy" /></span>
+            <span class="exp-work-caption">
+              <span class="exp-work-title">Semester Essentials</span>
+              <span class="exp-work-tag">Post</span>
+            </span>
+          </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarleton -->
+      <article class="exp-card">
+        <header class="exp-head">
+          <div class="exp-badge">TSU</div>
+          <div class="exp-title">
+            <p class="exp-role">Photographer / Videographer</p>
+            <h3 class="exp-school">Tarleton State University</h3>
+            <p class="exp-meta">
+              <span>Stephenville, TX</span>
+              <span class="exp-dates">2023 – 2025</span>
+            </p>
+          </div>
+        </header>
+        <ul class="exp-points">
+          <li>Produced short-form videos and photography for university events, programs, and social media content.</li>
+          <li>Worked under tight deadlines to capture, edit, and deliver content on schedule.</li>
+          <li>Created engaging visual content while adapting to different events, audiences, and creative needs.</li>
+        </ul>
+        <div class="exp-tags">
+          <span>Short-Form Video</span>
+          <span>Photography</span>
+          <span>Events</span>
+          <span>Social Media</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Showcase Sections -->
+  <section class="showcase container">
+
+    <!-- Featured -->
+    <div class="showcase-section" id="photos">
+      <div class="showcase-header">
+        <div class="showcase-header-text">
+          <p class="section-label">Featured</p>
+          <h2 class="section-heading">Photos</h2>
+        </div>
+        <a href="gallery.html" class="showcase-link">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="photo-grid photo-grid--offset">
+        <div class="photo-card">
+          <div class="photo-frame">
+            <img src="images/events/events5.webp" alt="Sports photo 1" loading="lazy" />
+          </div>
+        </div>
+        <div class="photo-card">
+          <div class="photo-frame">
+            <img src="images/people/people2.webp" alt="Sports photo 2" loading="lazy" />
+          </div>
+        </div>
+        <div class="photo-card">
+          <div class="photo-frame">
+            <img src="images/people/people9.webp" alt="Sports photo 3" loading="lazy" />
+          </div>
+        </div>
+        <div class="photo-card">
+          <div class="photo-frame">
+            <img src="images/campus/campus2.webp" alt="Sports photo 4" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!--
+
+     // Sports //
+    <div class="showcase-section">
+      <div class="showcase-header">
+        <span class="section-number">02</span>
+        <div class="showcase-header-text">
+          <p class="section-label">Category</p>
+          <h2 class="section-heading">Sports</h2>
+        </div>
+        <a href="gallery.html" class="showcase-link">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="images/sports/sports10.webp" alt="Event photo 1" />
+          <div class="photo-card-caption"><span>Corporate Gala</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/sports/sports15.webp" alt="Event photo 2" />
+          <div class="photo-card-caption"><span>Festival Lights</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/sports/sports4.webp" alt="Event photo 3" />
+          <div class="photo-card-caption"><span>Live Performance</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/sports/sports5.webp" alt="Event photo 4" />
+          <div class="photo-card-caption"><span>Grand Opening</span></div>
+        </div>
+      </div>
+    </div>
+
+    // Events //
+    <div class="showcase-section">
+      <div class="showcase-header">
+        <span class="section-number">03</span>
+        <div class="showcase-header-text">
+          <p class="section-label">Category</p>
+          <h2 class="section-heading">Events</h2>
+        </div>
+        <a href="gallery.html" class="showcase-link">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="images/events/events2.webp" alt="Event photo 1" />
+          <div class="photo-card-caption"><span>Corporate Gala</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/events/events8.webp" alt="Event photo 2" />
+          <div class="photo-card-caption"><span>Festival Lights</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/events/events1.webp" alt="Event photo 3" />
+          <div class="photo-card-caption"><span>Live Performance</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/events/events3.webp" alt="Event photo 4" />
+          <div class="photo-card-caption"><span>Grand Opening</span></div>
+        </div>
+      </div>
+    </div>
+
+   
+    // Weddings //
+    <div class="showcase-section">
+      <div class="showcase-header">
+        <span class="section-number">03</span>
+        <div class="showcase-header-text">
+          <p class="section-label">Category</p>
+          <h2 class="section-heading">Weddings</h2>
+        </div>
+        <a href="gallery.html" class="showcase-link">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding photo 1" />
+          <div class="photo-card-caption"><span>The First Look</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt="Wedding photo 2" />
+          <div class="photo-card-caption"><span>Ceremony</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Wedding photo 3" />
+          <div class="photo-card-caption"><span>Golden Hour</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Wedding photo 4" />
+          <div class="photo-card-caption"><span>Reception Joy</span></div>
+        </div>
+      </div>
+    </div>
+
+
+    // people //
+    <div class="showcase-section">
+      <div class="showcase-header">
+        <span class="section-number">04</span>
+        <div class="showcase-header-text">
+          <p class="section-label">Category</p>
+          <h2 class="section-heading">People</h2>
+        </div>
+        <a href="gallery.html" class="showcase-link">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-card">
+          <img src="images/people/people6.webp" alt="Creative photo 1" />
+          <div class="photo-card-caption"><span>Alpine Dawn</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/people/people8.webp" alt="Creative photo 2" />
+          <div class="photo-card-caption"><span>Ocean Rhythm</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/people/people3.webp" alt="Creative photo 3" />
+          <div class="photo-card-caption"><span>Field of Light</span></div>
+        </div>
+        <div class="photo-card">
+          <img src="images/people/people7.webp" alt="Creative photo 4" />
+          <div class="photo-card-caption"><span>Misty Horizons</span></div>
+        </div>
+      </div>
+    </div>
+
+   -->
+
+  </section>
+
+  <!-- ===================== Videos ===================== -->
+  <section class="videos container" id="videos">
+    <div class="showcase-header">
+      <div class="showcase-header-text">
+        <p class="section-label">Featured</p>
+        <h2 class="section-heading">Videos</h2>
+      </div>
+      <a href="videos.html" class="showcase-link">
+        View All
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+
+    <!-- Short form (reels) -->
+    <div class="video-group">
+      <div class="video-group-header">
+        <h3 class="video-group-title">Short Form Videos</h3>
+        <span class="video-group-meta">Reels</span>
+      </div>
+
+      <!--
+        TO ADD A REEL:
+        1. Put the video file in a folder called  videos/reels/  (e.g. videos/reels/reel1.mp4)
+        2. In one of the cards below, replace the whole  <div class="reel-placeholder"> ... </div>  with:
+             <video src="videos/reels/reel1.mp4" preload="metadata"></video>
+        Reels play silently while on screen; tapping one turns its sound on.
+        Add or remove <div class="reel-card"> blocks to change how many reels show.
+      -->
+      <div class="reel-row">
+        <div class="reel-card">
+          <video src="videos/reels/campus-move.mp4" preload="metadata" muted loop playsinline aria-label="Campus Move reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/life-at-uccs.mp4" preload="metadata" muted loop playsinline aria-label="Life at UCCS reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/rec-center-uccs.mp4" preload="metadata" muted loop playsinline aria-label="UCCS Rec Center reel"></video>
+        </div>
+        <div class="reel-card">
+          <video src="videos/reels/welcome-back.mp4" preload="metadata" muted loop playsinline aria-label="Welcome Back reel"></video>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      TO ADD THE YOUTUBE VIDEO (once Long Form is turned back on):
+      Replace the whole  <div class="longform-placeholder"> ... </div>  below with:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Documentary title"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      VIDEO_ID is the part after "watch?v=" in the YouTube link
+      (youtube.com/watch?v=abc123XYZ  ->  embed/abc123XYZ).
+    -->
+    <!-- LONG FORM (YouTube) IS HIDDEN FOR NOW. To show it again, delete this line and the line that says END LONG FORM below.
+    <div class="video-group">
+      <div class="video-group-header">
+        <h3 class="video-group-title">Long Form</h3>
+        <span class="video-group-meta">YouTube</span>
+      </div>
+      <div class="longform-card">
+        <div class="longform-placeholder">
+          <span class="ph-corner ph-corner--tl"></span>
+          <span class="ph-corner ph-corner--tr"></span>
+          <span class="ph-corner ph-corner--bl"></span>
+          <span class="ph-corner ph-corner--br"></span>
+          <span class="ph-play ph-play--lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <h4 class="longform-title">Documentary</h4>
+          <p class="section-label">Coming Soon</p>
+        </div>
+      </div>
+    </div>
+    END LONG FORM -->
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section container" id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <h2>Let's create <span>something</span> together</h2>
+        <a href="https://www.linkedin.com/in/victoria-steffers-034098440/" class="contact-linkedin" target="_blank" rel="noopener">
+          <span class="contact-linkedin-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v7M7 7v.01M11 17v-4.5c0-1.4 1-2.5 2.5-2.5S16 11.1 16 12.5V17M11 10v7"/></svg>
+          </span>
+          <span class="contact-linkedin-text">
+            <span class="contact-linkedin-label">Connect on</span>
+            LinkedIn
+          </span>
+        </a>
+      </div>
+
+      <!--
+        CONTACT FORM — messages are emailed to the address in action="..." below,
+        using FormSubmit (a free service; no account needed).
+        TO SET IT UP:
+        1. Replace email@gmail.com below with Vikki's real email (this is the only place it lives).
+        2. Once the site is online, send yourself one test message. FormSubmit will email that
+           address an "Activate Form" link — click it once. After that, messages go straight to the inbox.
+        3. Optional: the activation email includes a random code you can use in place of the email
+           address here, so the address isn't visible in the page code.
+        NOTE: don't send test messages while it still says email@gmail.com — that's a stranger's inbox.
+      -->
+      <!-- CONTACT FORM IS HIDDEN FOR NOW. To show it again, delete this line and the line that says END CONTACT FORM below. (The hidden "_honey" field is a spam trap.)
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/email@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from your website" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cfName">Name</label>
+            <input id="cfName" type="text" name="name" autocomplete="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="cfEmail">Email</label>
+            <input id="cfEmail" type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="cfType">What's it for? <span class="form-optional">(optional)</span></label>
+          <input id="cfType" type="text" name="inquiry" placeholder="e.g. sports, an event, a job offer" />
+        </div>
+
+        <div class="form-field">
+          <label for="cfMessage">Message</label>
+          <textarea id="cfMessage" name="message" rows="5" placeholder="Tell me about your project — date, location, what you have in mind." required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="form-submit">
+            <span class="form-submit-label">Send Message</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+      END CONTACT FORM -->
+    </div>
+  </section>
+
+  <!-- Lightbox for UCCS "Selected Work" -->
+  <div class="work-lightbox" id="workLightbox" role="dialog" aria-modal="true" aria-label="Full-size image" hidden>
+    <button type="button" class="wl-btn wl-close" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button type="button" class="wl-btn wl-prev" aria-label="Previous">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <figure class="wl-figure">
+      <img id="wlImg" src="" alt="" />
+      <figcaption><span id="wlTitle"></span><span id="wlTag"></span><span id="wlCount"></span></figcaption>
+    </figure>
+    <button type="button" class="wl-btn wl-next" aria-label="Next">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Victoria Steffers. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/victoria-steffers-034098440/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // ===== Viewfinder hero =====
+    (function () {
+      const hero = document.getElementById('hero');
+      const heroBg = document.getElementById('heroBg');
+      const vf = document.getElementById('viewfinder');
+      const focus = document.getElementById('vfFocus');
+      const shots = document.getElementById('vfShots');
+      const flash = document.getElementById('vfFlash');
+      const cta = hero.querySelector('.hero-cta');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Start the focus "hunt" + rack focus once the photo has loaded (with a fallback)
+      const ready = () => { hero.classList.add('is-ready'); placeFocus(); };
+      if (heroBg.complete && heroBg.naturalWidth) ready();
+      else {
+        heroBg.addEventListener('load', ready, { once: true });
+        heroBg.addEventListener('error', ready, { once: true });
+        setTimeout(ready, 3000);
+      }
+
+      // Put the focus box on the photo's focus point (object-fit: cover maths)
+      function placeFocus() {
+        const nw = heroBg.naturalWidth, nh = heroBg.naturalHeight;
+        if (!nw || !nh) return;
+        const W = hero.clientWidth, H = hero.clientHeight;
+        const scale = Math.max(W / nw, H / nh);
+        const dw = nw * scale, dh = nh * scale;
+        const zoom = 1.08; // average of the slow background zoom
+        let x = (W - dw) / 2 + parseFloat(heroBg.dataset.focusX || 0.5) * dw;
+        let y = (H - dh) / 2 + parseFloat(heroBg.dataset.focusY || 0.33) * dh;
+        x = W / 2 + (x - W / 2) * zoom - vf.offsetLeft;
+        y = H / 2 + (y - H / 2) * zoom - vf.offsetTop;
+        // keep it inside the frame, below the top readouts and above the button
+        const half = focus.offsetWidth / 2;
+        const minY = 48 + half;
+        const maxY = vf.clientHeight * 2 / 3 - cta.offsetHeight / 2 - half - 16; // stay above the View button
+        x = Math.min(Math.max(x, half + 24), vf.clientWidth - half - 24);
+        y = Math.min(Math.max(y, minY), Math.max(minY, maxY));
+        focus.style.left = x + 'px';
+        focus.style.top = y + 'px';
+      }
+      window.addEventListener('resize', placeFocus);
+
+      // Fade the viewfinder out as you scroll away from the hero
+      let scrollQueued = false;
+      window.addEventListener('scroll', () => {
+        if (scrollQueued) return;
+        scrollQueued = true;
+        requestAnimationFrame(() => {
+          const p = Math.min(window.scrollY / (hero.offsetHeight * 0.55), 1);
+          vf.style.opacity = 1 - p;
+          scrollQueued = false;
+        });
+      }, { passive: true });
+
+      // "Take the shot": shutter blink + flash, then glide down to the photos
+      document.querySelectorAll('.js-shutter').forEach(link => {
+        link.addEventListener('click', e => {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (!target) return;
+          e.preventDefault();
+          shots.textContent = Math.max(0, parseInt(shots.textContent, 10) - 1);
+          if (reduceMotion) { target.scrollIntoView(); return; }
+          flash.classList.remove('is-firing');
+          void flash.offsetWidth; // restart the animation if clicked twice
+          flash.classList.add('is-firing');
+          setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 280);
+        });
+      });
+    })();
+
+
+    // ===== Contact form: sends via FormSubmit without leaving the page =====
+    (function () {
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+      const status = document.getElementById('formStatus');
+      const button = form.querySelector('.form-submit');
+      const label = button.querySelector('.form-submit-label');
+      const recipient = decodeURIComponent(form.action.split('formsubmit.co/')[1] || '');
+
+      function showStatus(type, message, withEmailLink) {
+        status.className = 'form-status ' + (type ? 'is-' + type : '');
+        status.textContent = message;
+        if (withEmailLink && recipient.includes('@')) {
+          const link = document.createElement('a');
+          link.href = 'mailto:' + recipient;
+          link.textContent = recipient;
+          status.append(' You can also email ', link, '.');
+        }
+      }
+
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        const data = Object.fromEntries(new FormData(form));
+        if (data._honey) return; // spam bot filled the hidden field
+        data._replyto = data.email; // so "Reply" in the inbox goes to the sender
+
+        button.disabled = true;
+        label.textContent = 'Sending…';
+        showStatus('', '');
+        try {
+          const res = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(data)
+          });
+          const json = await res.json().catch(() => ({}));
+          if (!res.ok || String(json.success) !== 'true') {
+            const err = new Error(json.message || '');
+            err.fromServer = true; // e.g. the one-time "needs activation" notice
+            throw err;
+          }
+          form.reset();
+          showStatus('success', "Thanks — your message is on its way. I'll be in touch soon.");
+        } catch (err) {
+          if (err.fromServer && err.message) showStatus('error', err.message);
+          else showStatus('error', 'Sorry, your message couldn’t be sent. Please try again.', true);
+        } finally {
+          button.disabled = false;
+          label.textContent = 'Send Message';
+        }
+      });
+    })();
+
+    // ===== Lightbox (UCCS "Selected Work") =====
+    // Any container with data-lightbox becomes a group; items inside with data-full open full size.
+    (function () {
+      const box = document.getElementById('workLightbox');
+      const groups = [...document.querySelectorAll('[data-lightbox]')];
+      if (!box || !groups.length) return;
+      const img = document.getElementById('wlImg');
+      const title = document.getElementById('wlTitle');
+      const tag = document.getElementById('wlTag');
+      const count = document.getElementById('wlCount');
+      let items = [], index = 0, lastFocus = null;
+
+      function show(i) {
+        index = (i + items.length) % items.length;
+        const it = items[index];
+        img.src = it.dataset.full;
+        img.alt = (it.querySelector('img') || {}).alt || '';
+        title.textContent = it.dataset.title || '';
+        tag.textContent = it.dataset.tag || '';
+        count.textContent = (index + 1) + ' / ' + items.length;
+      }
+      function open(list, i) {
+        items = list;
+        lastFocus = document.activeElement;
+        show(i);
+        box.hidden = false;
+        requestAnimationFrame(() => box.classList.add('is-open'));
+        document.body.style.overflow = 'hidden';
+        box.querySelector('.wl-close').focus();
+      }
+      function close() {
+        box.classList.remove('is-open');
+        document.body.style.overflow = '';
+        setTimeout(() => { box.hidden = true; }, 250);
+        if (lastFocus) lastFocus.focus();
+      }
+      groups.forEach(group => {
+        const list = [...group.querySelectorAll('[data-full]')];
+        list.forEach((it, i) => it.addEventListener('click', () => open(list, i)));
+      });
+      box.querySelector('.wl-close').addEventListener('click', close);
+      box.querySelector('.wl-prev').addEventListener('click', () => show(index - 1));
+      box.querySelector('.wl-next').addEventListener('click', () => show(index + 1));
+      box.addEventListener('click', e => { if (e.target === box) close(); });
+      document.addEventListener('keydown', e => {
+        if (box.hidden) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(index - 1);
+        if (e.key === 'ArrowRight') show(index + 1);
+      });
+      // swipe on phones
+      let x0 = null;
+      box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+      box.addEventListener('touchend', e => {
+        if (x0 === null) return;
+        const dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+        x0 = null;
+      });
+    })();
+
+    // ===== Experience stats: count up real numbers when they scroll into view =====
+    (function () {
+      const stats = document.querySelectorAll('.exp-stat-num');
+      if (!stats.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (!isIntersecting) return;
+          io.unobserve(target);
+          const m = target.textContent.trim().match(/^([^\d]*)([\d,]*\.?\d+)(.*)$/);
+          if (!m) return; // still a placeholder like "XX+"
+          const prefix = m[1];
+          const end = parseFloat(m[2].replace(/,/g, ''));
+          const decimals = (m[2].split('.')[1] || '').length;
+          const suffix = m[3];
+          const t0 = performance.now(), dur = 1400;
+          (function step(now) {
+            const p = Math.min((now - t0) / dur, 1);
+            const val = end * (1 - Math.pow(1 - p, 3));
+            target.textContent = prefix + val.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          })(t0);
+        });
+      }, { threshold: 0.6 });
+      stats.forEach(s => io.observe(s));
+    })();
+  </script>
+  <script src="js/reels.js"></script>
+
+</body>
+</html>
